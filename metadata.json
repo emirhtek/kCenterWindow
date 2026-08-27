@@ -1,0 +1,14 @@
+{
+    "KPlugin": {
+        "Id": "kCenterWindow",
+        "Name": "KDE Float Center",
+        "Description": "Center, toggle and resize windows from center",
+        "Icon": "preferences-system-windows",
+        "ServiceTypes": ["KWin/Script"],
+        "Version": "1.0",
+        "Authors": [{"Name": "emirhtek"}]
+    },
+    "X-Plasma-API": "javascript",
+    "X-Plasma-MainScript": "code/main.js",
+    "KPackageStructure": "KWin/Script"
+}
