@@ -15,16 +15,13 @@ App.isEqual = function (g1, g2) {
   return g1.x === g2.x && g1.y === g2.y && g1.width === g2.width && g1.height === g2.height;
 };
 
-// KWin durum kilidini (Maximize ve QuickTile) anında çözen yardımcı
 App.cleanWindowState = function (win) {
-  // 1. Plasma 6 / KWin Maximize durumunu tamamen sıfırla
   if (typeof win.setMaximize === 'function') {
     win.setMaximize(false, false);
   } else if (win.maximized) {
     win.maximized = 0;
   }
 
-  // 2. Köşeye/yana yapışma (QuickTile) kilidi varsa temizle
   if (win.quickTileMode && win.quickTileMode !== 0) {
     win.quickTileMode = 0;
   }
@@ -40,7 +37,6 @@ App.toggle = function () {
   var currentGeo = win.frameGeometry;
   var state = App.states[id];
 
-  // Eğer zaten script ile ortalanmış durumdaysa: Eski haline döndür
   if (state && App.isEqual(currentGeo, state.applied)) {
     App.cleanWindowState(win);
     win.frameGeometry = state.original;
@@ -48,7 +44,6 @@ App.toggle = function () {
     return;
   }
 
-  // Pencere tam ekransa veya kararsız durumdaysa kilidi önceden kaldır
   App.cleanWindowState(win);
 
   var area = workspace.clientArea(KWin.MaximizeArea, win);
@@ -74,7 +69,6 @@ App.resizeFromCenter = function (direction) {
   var id = win.internalId ? win.internalId.toString() : null;
   if (!id) return;
 
-  // Boyutlandırma çağrıldığında tam ekran kilidi varsa temizle
   App.cleanWindowState(win);
 
   var area = workspace.clientArea(KWin.MaximizeArea, win);
@@ -99,7 +93,6 @@ App.resizeFromCenter = function (direction) {
 
   win.frameGeometry = { x: newX, y: newY, width: newWidth, height: newHeight };
 
-  // Boyut elle değiştirildiği için kayıtlı toggle döngüsünden çıkar
   delete App.states[id];
 };
 
