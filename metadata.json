@@ -1,0 +1,18 @@
+{
+    "KPlugin": {
+        "Id": "kwin-center-window",
+        "Name": "Center Window",
+        "Description": "Center, resize, and toggle active windows via shortcuts",
+        "Icon": "preferences-system-windows",
+        "ServiceTypes": ["KWin/Script"],
+        "Version": "1.0",
+        "Authors": [
+            {
+                "Name": "emirhtek"
+            }
+        ]
+    },
+    "X-Plasma-API": "javascript",
+    "X-Plasma-MainScript": "code/main.js",
+    "KPackageStructure": "KWin/Script"
+}
