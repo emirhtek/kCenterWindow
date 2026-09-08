@@ -27,7 +27,7 @@ qdbus org.kde.KWin /Scripting org.kde.kwin.Scripting.start
 
 Alternatively, you can enable it manually via System Settings > Window Management > KWin Scripts.
 
-After installing, you can customize the default keybindings under System Settings > Shortcuts > KWin (search for Center Window).
+After installing, you can customize the default keybindings under System Settings > Shortcuts > KWin (search for kwin-center-window).
 
 ### KDE Store (Coming Soon)
 
