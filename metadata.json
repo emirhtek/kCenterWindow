@@ -1,7 +1,7 @@
 {
     "KPlugin": {
-        "Id": "kwin-center-window_dev",
-        "Name": "Center Window Dev",
+        "Id": "kwin-center-window",
+        "Name": "Center Window",
         "Description": "Center, resize, and toggle active windows via shortcuts",
         "Icon": "preferences-system-windows",
         "License": "GPL-3.0-or-later",
@@ -16,7 +16,7 @@
     },
     "X-Plasma-API": "javascript",
     "X-Plasma-MainScript": "code/main.js",
-    "X-KDE-PluginKeyword": "kwin-center-window_dev",
+    "X-KDE-PluginKeyword": "kwin-center-window",
     "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted",
     "KPackageStructure": "KWin/Script"
 }
