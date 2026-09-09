@@ -4,6 +4,7 @@
         "Name": "Center Window",
         "Description": "Center, resize, and toggle active windows via shortcuts",
         "Icon": "preferences-system-windows",
+        "License": "GPL-3.0-or-later"
         "ServiceTypes": ["KWin/Script"],
         "Version": "1.0",
         "Authors": [
