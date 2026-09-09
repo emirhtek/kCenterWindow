@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name="kwinrc"/>
+  <group name="">
+    <entry name="WIDTH" type="Double">
+      <default>0.50</default>
+      <min>0.10</min>
+      <max>1.00</max>
+    </entry>
+    <entry name="HEIGHT" type="Double">
+      <default>0.60</default>
+      <min>0.10</min>
+      <max>1.00</max>
+    </entry>
+    <entry name="STEP_X" type="Int">
+      <default>40</default>
+      <min>5</min>
+      <max>300</max>
+    </entry>
+    <entry name="STEP_Y" type="Int">
+      <default>30</default>
+      <min>5</min>
+      <max>300</max>
+    </entry>
+  </group>
+</kcfg>

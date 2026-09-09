@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KWinCenterWindowConfig</class>
+ <widget class="QWidget" name="KWinCenterWindowConfig">
+  <layout class="QFormLayout" name="formLayout">
+
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_WIDTH">
+     <property name="text">
+      <string>Pencere Genişlik Oranı (0.1 - 1.0):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QDoubleSpinBox" name="kcfg_WIDTH">
+     <property name="minimum">
+      <double>0.1</double>
+     </property>
+     <property name="maximum">
+      <double>1.0</double>
+     </property>
+     <property name="singleStep">
+      <double>0.05</double>
+     </property>
+    </widget>
+   </item>
+
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_HEIGHT">
+     <property name="text">
+      <string>Pencere Yükseklik Oranı (0.1 - 1.0):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QDoubleSpinBox" name="kcfg_HEIGHT">
+     <property name="minimum">
+      <double>0.1</double>
+     </property>
+     <property name="maximum">
+      <double>1.0</double>
+     </property>
+     <property name="singleStep">
+      <double>0.05</double>
+     </property>
+    </widget>
+   </item>
+
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_STEP_X">
+     <property name="text">
+      <string>Yatay Boyutlandırma Adımı (px):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QSpinBox" name="kcfg_STEP_X">
+     <property name="minimum">
+      <number>5</number>
+     </property>
+     <property name="maximum">
+      <number>300</number>
+     </property>
+     <property name="singleStep">
+      <number>5</number>
+     </property>
+    </widget>
+   </item>
+
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_STEP_Y">
+     <property name="text">
+      <string>Dikey Boyutlandırma Adımı (px):</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QSpinBox" name="kcfg_STEP_Y">
+     <property name="minimum">
+      <number>5</number>
+     </property>
+     <property name="maximum">
+      <number>300</number>
+     </property>
+     <property name="singleStep">
+      <number>5</number>
+     </property>
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

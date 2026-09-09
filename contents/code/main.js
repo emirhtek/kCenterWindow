@@ -1,14 +1,18 @@
 var App = {};
 App.states = {};
 
-App.config = {
-  WIDTH: Number(readConfig('WIDTH', 0.5)) || 0.5,
-  HEIGHT: Number(readConfig('HEIGHT', 0.6)) || 0.6,
-  STEP_X: Number(readConfig('STEP_X', 40)) || 40,
-  STEP_Y: Number(readConfig('STEP_Y', 30)) || 30,
-  MIN_WIDTH: 400,
-  MIN_HEIGHT: 300
+App.loadConfig = function () {
+  App.config = {
+    WIDTH: Number(readConfig('WIDTH', 0.5)) || 0.5,
+    HEIGHT: Number(readConfig('HEIGHT', 0.6)) || 0.6,
+    STEP_X: Number(readConfig('STEP_X', 40)) || 40,
+    STEP_Y: Number(readConfig('STEP_Y', 30)) || 30,
+    MIN_WIDTH: 400,
+    MIN_HEIGHT: 300
+  };
 };
+
+App.loadConfig();
 
 App.isEqual = function (g1, g2) {
   if (!g1 || !g2) return false;
@@ -19,16 +23,20 @@ App.isEqual = function (g1, g2) {
 };
 
 App.cleanWindowState = function (win) {
-  if (win.maximized) {
-    if (typeof win.setMaximize === 'function') {
-      win.setMaximize(false, false);
-    } else {
-      win.maximized = 0;
-    }
+  if (typeof win.setMaximize === 'function') {
+    win.setMaximize(false, false);
+  } else {
+    try {
+      win.maximized = false;
+    } catch (e) {}
   }
 
   if (win.quickTileMode && win.quickTileMode !== 0) {
     win.quickTileMode = 0;
+  }
+
+  if (win.tile) {
+    win.tile = null;
   }
 };
 
@@ -107,6 +115,10 @@ App.main = function () {
   registerShortcut('toggle', 'kwin-center-window: Center / Restore Window', 'Meta+C', App.toggle);
   registerShortcut('expand', 'kwin-center-window: Expand Center', 'Ctrl+Alt+J', App.expand);
   registerShortcut('shrink', 'kwin-center-window: Shrink Center', 'Ctrl+Alt+K', App.shrink);
+
+  if (typeof options !== 'undefined' && options.configChanged) {
+    options.configChanged.connect(App.loadConfig);
+  }
 
   workspace.windowRemoved.connect(function (win) {
     if (win && win.internalId) {
