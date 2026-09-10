@@ -7,7 +7,7 @@
    <item row="0" column="0">
     <widget class="QLabel" name="label_WIDTH">
      <property name="text">
-      <string>Pencere Genişlik Oranı (0.1 - 1.0):</string>
+      <string>Window Width Ratio (0.1 - 1.0):</string>
      </property>
     </widget>
    </item>
@@ -28,7 +28,7 @@
    <item row="1" column="0">
     <widget class="QLabel" name="label_HEIGHT">
      <property name="text">
-      <string>Pencere Yükseklik Oranı (0.1 - 1.0):</string>
+      <string>Window Height Ratio (0.1 - 1.0):</string>
      </property>
     </widget>
    </item>
@@ -49,7 +49,7 @@
    <item row="2" column="0">
     <widget class="QLabel" name="label_STEP_X">
      <property name="text">
-      <string>Yatay Boyutlandırma Adımı (px):</string>
+      <string>Horizontal Resize Step (px):</string>
      </property>
     </widget>
    </item>
@@ -70,7 +70,7 @@
    <item row="3" column="0">
     <widget class="QLabel" name="label_STEP_Y">
      <property name="text">
-      <string>Dikey Boyutlandırma Adımı (px):</string>
+      <string>Vertical Resize Step (px):</string>
      </property>
     </widget>
    </item>
